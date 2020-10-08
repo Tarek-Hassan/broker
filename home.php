@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -55,14 +56,15 @@
               <li><a
                   href="term.php"><?php if($_COOKIE["lang"]=='en'){echo "Terms of service";}else{echo"الشروط والاحكام";}?></a>
               </li>
-              <li>
-                <select  class="mx-2" data-width="fit" onchange="location = this.value;">
-                  <option></option>
-                  <option value="home.php?lang=en" <?php if($_COOKIE['lang']=='en'){ echo "Selected";} ?> >English</option>
-                  <option value="home.php?lang=ar" <?php if($_COOKIE['lang']=='ar'){ echo "Selected";} ?> >عربي</option>
-                  
+              <div class="mx-4">
+                <select class="form-control" onchange="location = this.value;">
+                  <option value="home.php?lang=en" <?php if($_COOKIE['lang']=='en'){ echo "Selected";} ?>>English
+                  </option>
+                  <option value="home.php?lang=ar" <?php if($_COOKIE['lang']=='ar'){ echo "Selected";} ?>>عربي</option>
                 </select>
-              </li>
+              </div>
+
+
             </ul>
 
           </nav><!-- .nav-menu -->
@@ -128,7 +130,7 @@
             <div class="carousel-container">
               <div class="container">
                 <?php if($_COOKIE["lang"]=='en'){?>
-                <h2 class="animate__animated animate__fadeInDown">Buying Agricultura <br/>Residential land</h2>
+                <h2 class="animate__animated animate__fadeInDown">Buying Agricultura <br />Residential land</h2>
                 <?php }else{?>
                 <h2 class="animate__animated animate__fadeInDown">شراء اراضي زراعية وسكنية</h2>
                 <?php }?>
@@ -169,27 +171,27 @@
   </section><!-- End Intro Section -->
   <main id="main">
 
-<!-- ======= Featured Services Section Section ======= -->
-<section id="featured-services">
-  <div class="container">
-    <div class="row">
+    <!-- ======= Featured Services Section Section ======= -->
+    <section id="featured-services">
+      <div class="container">
+        <div class="row">
 
-      <div class="col-lg-4 box">
-        <i class="ion-ios-bookmarks-outline"></i>
-        <h4 class="title"><a href="">Contact Us</a></h4>
-        <p>
+          <div class="col-lg-4 box">
+            <i class="ion-ios-bookmarks-outline"></i>
+            <h4 class="title"><a href="">Contact Us</a></h4>
+            <p>
               Ukraine-kiev <br>
               Street: Ernsta 16<br>
               <!-- <strong>Phone:</strong> +1 5589 55488 55<br> -->
               <strong>Email:</strong>ALAJAL_ALNADJIHA@hotmail.com<br>
-        </p>
+            </p>
+          </div>
+
+
+
+        </div>
       </div>
-
-
-
-    </div>
-  </div>
-</section><!-- End Featured Services Section -->
+    </section><!-- End Featured Services Section -->
   </main>
 
 
@@ -213,7 +215,7 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-    
+
 
 </body>
 
