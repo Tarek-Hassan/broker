@@ -58,8 +58,8 @@
               <li>
                 <select  class="mx-2" data-width="fit" onchange="location = this.value;">
                   <option></option>
-                  <option value="home.php?lang=en">English</option>
-                  <option value="home.php?lang=ar">عربي</option>
+                  <option value="home.php?lang=en" <?php if($_COOKIE['lang']=='en'){ echo "Selected";} ?> >English</option>
+                  <option value="home.php?lang=ar" <?php if($_COOKIE['lang']=='ar'){ echo "Selected";} ?> >عربي</option>
                   
                 </select>
               </li>
@@ -80,7 +80,7 @@
 
         <ol class="carousel-indicators"></ol>
 
-        <div class="carousel-inner" role="listbox">
+        <div class="carousel-inner text-center" role="listbox">
 
           <div class="carousel-item active" style="background-image: url(assets/img/intro-carousel/1.jpg)">
             <div class="carousel-container">
@@ -142,7 +142,7 @@
             <div class="carousel-container">
               <div class="container">
                 <?php if($_COOKIE["lang"]=='en'){?>
-                <h2 class="animate__animated animate__fadeInDown">Buying Agricultura/Residential land</h2>
+                <h2 class="animate__animated animate__fadeInDown">Buying Agricultura <br/>Residential land</h2>
                 <?php }else{?>
                 <h2 class="animate__animated animate__fadeInDown">شراء اراضي زراعية وسكنية</h2>
                 <?php }?>

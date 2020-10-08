@@ -56,8 +56,8 @@
               <li>
                 <select  class="mx-2" data-width="fit" onchange="location = this.value;">
                   <option></option>
-                  <option value="home.php?lang=en">English</option>
-                  <option value="home.php?lang=ar">عربي</option>
+                  <option value="term.php?lang=en" <?php if($_COOKIE['lang']=='en'){ echo "Selected";} ?> >English</option>
+                  <option value="term.php?lang=ar" <?php if($_COOKIE['lang']=='ar'){ echo "Selected";} ?> >عربي</option>
                   
                 </select>
               </li>
@@ -89,20 +89,23 @@
     <section class="inner-page mt-4">
       <div class="container text-center">
         <form action="home.php">
+        <ul>
         <?php if($_COOKIE["lang"]=='en'){?>
-        <p>
+       
+          <li>
           The site is not responsible for the source of the money
-        </p>
-        <p>
+        </li>
+        <li>
           A deposit paid is not refunded
-        </p>
+        </li>
         <?php }else{?>
-        <p>
+        <li>
           الموقع غير مسؤل عن مصدر الاموال
-        </p>
-        <p>
+        </li>
+        <li>
           المبلغ المدفوع لا يرد
-        </p>
+        </li>
+        </ul>
         <?php }?>
         
         <?php if($_COOKIE["lang"]=='en'){echo "I Agree to Terms of service";}else{echo"مواقف علي الشروط والاحكام";}?> <input type="checkbox" required /><br/>
