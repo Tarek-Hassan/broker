@@ -242,5 +242,8 @@
   $(window).on('load', function() {
     aos_init();
   });
-
+//   $(function() {
+//     $('.selectpicker').selectpicker();
+    
+// });
 })(jQuery);
